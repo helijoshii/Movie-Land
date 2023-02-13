@@ -21,6 +21,8 @@ const App = () => {
       setMovies(data.Search);
     };
 
+   
+
     return (
         <div className="app">
             <h1>MovieLand</h1>
@@ -30,11 +32,13 @@ const App = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="search for movies"
+                // onKeyUp={(e) => if(e.keyCode === 13){searchMovies(searchTerm)}}}
                 />
                 <img
                     src={SearchIcon}
                     alt="search"
                     onClick={() => searchMovies(searchTerm)}
+                    id="searchBtn"
                 />
             </div>
 
